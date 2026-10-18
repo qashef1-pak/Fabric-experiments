@@ -1,0 +1,5 @@
+RESULTS — THROUGHPUT AND LATENCY
+
+A total of 27 Caliper runs were evaluated, comprising three batch sizes (10, 50, and 100), three transaction loads (1,000, 5,000, and 8,000), and three experimental runs. All 27 runs completed with 100% successful transactions. Across the complete dataset, mean throughput was 69.59 TPS at 1,000 transactions, 71.80 TPS at 5,000, and 76.40 TPS at 8,000. Corresponding mean average latency was 0.717 s, 0.822 s, and 0.792 s.
+
+At the heavy workload of 8,000 transactions, batch size 50 provided the best overall trade-off, achieving the highest mean throughput (83.87 TPS) and the lowest mean latency (0.727 s). Relative to batch size 10, batch size 50 improved throughput by 6.6% and reduced latency by 11.0%. Relative to batch size 100, the improvements were 25.8% and 12.8%, respectively. These results indicate that the proposed framework performs particularly well under heavy transaction load when the ordering batch size is set to 50.
