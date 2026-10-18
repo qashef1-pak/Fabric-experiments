@@ -1,0 +1,30 @@
+test:
+  name: mfc-experiment
+  description: >
+    Hyperledger Fabric MFC performance experiment.
+    Each Caliper invocation executes exactly one transaction workload.
+    Fabric ordering-service batch size is controlled externally.
+
+  workers:
+    number: 20
+  rounds:
+    - label: EXP5_batch_100_tx_2000_workers_20_tps_200
+      txNumber: 2000
+      rateControl:
+        type: fixed-load
+        opts:
+          transactionLoad: 200
+      workload:
+        module: workload/create-mfc.js
+        arguments:
+          contractId: mfc
+
+monitors:
+  resource:
+    - module: docker
+      options:
+        interval: 2
+        containers:
+          - peer0.org1.example.com
+          - peer0.org2.example.com
+          - orderer.example.com

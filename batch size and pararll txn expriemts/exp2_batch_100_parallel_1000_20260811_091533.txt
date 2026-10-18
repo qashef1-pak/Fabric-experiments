@@ -1,0 +1,31 @@
+MFC Caliper Experiment
+======================
+
+Experiment: 2
+Run ID: 20260811_091533
+Date: 2026-08-11 09:17:02 PKT
+
+Experiment Matrix
+-----------------
+BatchSize: 100
+Transaction workload: 1000
+Caliper txNumber: 1000
+
+Caliper Runtime
+---------------
+Workers: 5
+Target send rate (TPS): 100
+
+Fabric
+------
+Channel: channel1
+Chaincode: mfc
+Chaincode language: javascript
+BatchTimeout: 2s
+
+Files
+-----
+Benchmark config: /home/kashif/fabric-samples/test-network/mfc-caliper/caliper-workspace/benchmarks/config.yaml
+Network config: /home/kashif/fabric-samples/test-network/mfc-caliper/caliper-workspace/networks/test-network.yaml
+Chaincode: /home/kashif/fabric-samples/test-network/mfc-caliper/chaincode/mfc-contract
+Report: /home/kashif/fabric-samples/test-network/mfc-caliper/caliper-workspace/reports/matrix/exp2_batch_100_parallel_1000_20260811_091533.html
