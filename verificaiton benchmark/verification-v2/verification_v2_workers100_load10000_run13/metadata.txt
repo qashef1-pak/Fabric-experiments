@@ -1,0 +1,44 @@
+MFC Verification Benchmark
+==========================
+
+Experiment:
+13
+
+Run:
+verification_v2_workers100_load10000_run13
+
+Run timestamp:
+20260827_103157
+
+Operation:
+QueryMFC(reportId)
+
+Report ID:
+MFC-2026-000146
+
+Verification requests:
+10000
+
+Workers tested:
+5, 10, 50, 100
+
+Target TPS:
+100
+
+Fabric channel:
+channel1
+
+Chaincode:
+mfc
+
+Peer:
+peer0.org1.example.com
+
+Peer address:
+localhost:7051
+
+Important:
+QueryMFC is read-only. These verification requests do not go
+through the ordering service and do not create new Fabric blocks.
+
+The MFC record was confirmed to exist before the benchmark.

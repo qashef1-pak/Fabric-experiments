@@ -1,0 +1,23 @@
+test:
+  name: mfc-verification-v2
+  description: MFC QueryMFC read-only verification benchmark
+
+  workers:
+    number: 5
+
+  rounds:
+    - label: verification_v2_workers5_load100000_run4
+      description: QueryMFC read-only verification workload
+      txNumber: 100000
+
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 100
+
+      workload:
+        module: /home/kashif/fabric-samples/test-network/mfc-caliper/caliper-workspace/workload-verification-v2/mfc-verification.js
+        arguments:
+          reportId: "MFC-2026-000146"
+          contractId: "mfc"
+
